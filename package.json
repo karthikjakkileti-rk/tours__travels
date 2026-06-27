@@ -1,32 +1,14 @@
 {
-  "name": "manivtha-trip-dashboard",
+  "name": "manivtha-gps-trip-tracking-dashboard",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
+  "description": "GPS-Based Trip Tracking Dashboard for Manivtha Tours & Travels",
   "scripts": {
-    "dev": "vite --host 0.0.0.0 --configLoader runner",
-    "build": "vite build --configLoader runner",
-    "preview": "vite preview",
-    "test": "vitest --configLoader runner"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "@mui/icons-material": "^6.1.6",
-    "@mui/material": "^6.1.6",
-    "axios": "^1.7.7",
-    "jspdf": "^4.2.0",
-    "leaflet": "^1.9.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-hook-form": "^7.53.1",
-    "react-leaflet": "^4.2.1",
-    "react-router-dom": "^6.27.0",
-    "recharts": "^3.3.0"
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "dev": "concurrently \"npm --prefix backend run dev\" \"npm --prefix frontend run dev\"",
+    "test": "npm --prefix backend test && npm --prefix frontend test"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^5.1.1",
-    "vite": "^7.2.6",
-    "vitest": "^4.1.0"
+    "concurrently": "^8.2.2"
   }
 }
